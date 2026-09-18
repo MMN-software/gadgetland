@@ -1,19 +1,3 @@
-بریم یه README حرفه‌ای برای پروژه فروشگاهی گجت‌لند بنویسیم. 🛒
-
----
-
-📝 مرحله ۱ — فایل README بساز
-
-توی مخزن گیت‌هاب:
-
-1. برو به: https://github.com/MMN-software/gadgetland
-2. روی Add file → Create new file بزن
-3. اسم فایل: README.md
-4. کد زیر رو پیست کن
-
----
-
-📄 متن README (کپی کن)
 
 ```markdown
 <div align="center">
