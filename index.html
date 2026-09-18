@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>گجت‌لند | فروشگاه آنلاین لوازم دیجیتال</title>
+<meta name="description" content="گجت‌لند، فروشگاه آنلاین لوازم دیجیتال و گجت‌های مدرن. خرید هدفون، ساعت هوشمند، پاوربانک، اسپیکر و لوازم جانبی موبایل با ارسال سریع.">
+<meta name="keywords" content="فروشگاه آنلاین, لوازم دیجیتال, هدفون, ساعت هوشمند, گجت, موبایل, لوازم جانبی">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --purple:#6d28d9;--purple-dark:#4c1d95;--purple-light:#8b5cf6;
+  --cyan:#06b6d4;--cyan-dark:#0891b2;--cyan-light:#67e8f9;
+  --bg:#faf5ff;--bg2:#f5f3ff;--white:#fff;
+  --text:#1e293b;--muted:#64748b;--border:#ede9fe;
+  --success:#10b981;--danger:#ef4444;--warning:#f59e0b;
+  --shadow:0 4px 20px rgba(109,40,217,.08);
+  --shadow-lg:0 16px 48px rgba(109,40,217,.15);
+  --radius:16px;--radius-sm:11px;--container:1240px;
+}
+html{scroll-behavior:smooth}
+body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;direction:rtl;overflow-x:hidden;font-size:15px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select,textarea{font-family:inherit;font-size:14px;color:inherit}
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+/* ===== Header ===== */
+.header{position:fixed;top:0;right:0;left:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);transition:.35s;border-bottom:1px solid var(--border)}
+.header.scrolled{box-shadow:0 4px 30px rgba(109,40,217,.08)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;flex-shrink:0;background:linear-gradient(135deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--purple),var(--cyan));display:grid;place-items:center;color:#fff;font-size:22px;font-weight:800;box-shadow:0 4px 14px rgba(109,40,217,.4);-webkit-text-fill-color:#fff}
+.nav{display:flex;gap:4px;align-items:center}
+.nav a{padding:9px 14px;border-radius:9px;font-size:14px;font-weight:500;color:var(--text);transition:.25s}
+.nav a:hover,.nav a.active{color:var(--purple);background:var(--bg2)}
+.header-actions{display:flex;align-items:center;gap:10px}
+.search-toggle{width:42px;height:42px;border-radius:12px;background:var(--bg2);display:grid;place-items:center;color:var(--purple);font-size:18px;transition:.25s}
+.search-toggle:hover{background:var(--purple);color:#fff}
+.cart-btn{position:relative;width:42px;height:42px;border-radius:12px;background:var(--bg2);display:grid;place-items:center;color:var(--purple);font-size:18px;transition:.25s}
+.cart-btn:hover{background:var(--purple);color:#fff}
+.cart-badge{position:absolute;top:-4px;left:-4px;background:var(--danger);color:#fff;font-size:11px;font-weight:700;min-width:20px;height:20px;border-radius:10px;display:grid;place-items:center;padding:0 5px}
+.menu-toggle{display:none;width:42px;height:42px;border-radius:12px;background:var(--bg2);color:var(--purple);font-size:20px;align-items:center;justify-content:center}
+
+.mobile-menu{position:fixed;top:76px;right:0;left:0;bottom:0;background:#fff;z-index:999;padding:20px;overflow-y:auto;transform:translateX(100%);transition:.35s cubic-bezier(.4,0,.2,1)}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu a{display:block;padding:15px 18px;border-radius:12px;font-size:15px;font-weight:500;margin-bottom:6px;background:var(--bg2);transition:.25s}
+.mobile-menu a:hover,.mobile-menu a.active{background:var(--purple);color:#fff}
+
+/* ===== Search Bar ===== */
+.search-bar{position:fixed;top:76px;right:0;left:0;background:#fff;z-index:998;padding:16px 0;box-shadow:0 8px 24px rgba(109,40,217,.08);transform:translateY(-120%);transition:.35s}
+.search-bar.open{transform:translateY(0)}
+.search-bar input{width:100%;padding:13px 20px;border:2px solid var(--border);border-radius:14px;background:var(--bg2);transition:.25s;font-size:15px}
+.search-bar input:focus{outline:none;border-color:var(--purple);background:#fff}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 22px;border-radius:12px;font-weight:600;font-size:14px;transition:.28s;white-space:nowrap;cursor:pointer}
+.btn-primary{background:linear-gradient(135deg,var(--purple),var(--purple-dark));color:#fff;box-shadow:0 6px 20px rgba(109,40,217,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(109,40,217,.45)}
+.btn-cyan{background:linear-gradient(135deg,var(--cyan),var(--cyan-dark));color:#fff;box-shadow:0 6px 20px rgba(6,182,212,.3)}
+.btn-cyan:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(6,182,212,.45)}
+.btn-outline{background:transparent;border:1.5px solid var(--purple);color:var(--purple)}
+.btn-outline:hover{background:var(--purple);color:#fff}
+.btn-ghost{background:var(--bg2);color:var(--purple)}
+.btn-ghost:hover{background:var(--purple);color:#fff}
+.btn-block{width:100%}
+.btn-lg{padding:15px 32px;font-size:15px;border-radius:14px}
+.btn-sm{padding:8px 16px;font-size:13px}
+
+/* ===== Hero ===== */
+.hero{padding:130px 0 70px;background:linear-gradient(135deg,#faf5ff 0%,#f0f9ff 100%);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-20%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(109,40,217,.15),transparent 65%);border-radius:50%}
+.hero::after{content:"";position:absolute;bottom:-30%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(6,182,212,.12),transparent 65%);border-radius:50%}
+.hero-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;color:var(--purple);background:rgba(109,40,217,.1);border:1px solid rgba(109,40,217,.2);padding:8px 18px;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:20px}
+.hero h1{font-size:clamp(30px,4.5vw,52px);font-weight:800;line-height:1.3;margin-bottom:20px;letter-spacing:-.5px}
+.hero h1 span{background:linear-gradient(135deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:var(--muted);font-size:16px;margin-bottom:30px;max-width:520px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.hero-features{display:flex;gap:24px;flex-wrap:wrap}
+.hero-feature{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text);font-weight:500}
+.hero-feature i{width:36px;height:36px;border-radius:10px;background:#fff;display:grid;place-items:center;color:var(--purple);font-size:16px;font-style:normal;box-shadow:var(--shadow)}
+.hero-img{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.hero-img img{width:100%;height:auto;object-fit:cover}
+.hero-float{position:absolute;background:#fff;border-radius:14px;padding:12px 16px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600}
+.hero-float-1{top:20px;right:-20px;animation:float 3s ease-in-out infinite}
+.hero-float-2{bottom:30px;left:-20px;animation:float 3s ease-in-out infinite .5s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ===== Categories ===== */
+.cats-section{padding:60px 0}
+.cats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.cat-card{background:#fff;border-radius:var(--radius);padding:24px 16px;text-align:center;box-shadow:var(--shadow);transition:.3s;border:1px solid var(--border);cursor:pointer}
+.cat-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--purple)}
+.cat-icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,var(--bg2),#fff);display:grid;place-items:center;font-size:28px;margin:0 auto 14px;transition:.3s}
+.cat-card:hover .cat-icon{background:linear-gradient(135deg,var(--purple),var(--cyan));transform:scale(1.1)}
+.cat-card h4{font-size:14.5px;font-weight:700;color:var(--text)}
+
+/* ===== Section ===== */
+.section{padding:70px 0}
+.section-head{text-align:center;margin-bottom:46px}
+.section-head.right{text-align:right}
+.section-eyebrow{display:inline-block;color:var(--purple);font-size:13px;font-weight:700;letter-spacing:2px;margin-bottom:10px}
+.section-head h2{font-size:clamp(22px,3.2vw,34px);font-weight:800;line-height:1.4;margin-bottom:12px}
+.section-head p{color:var(--muted);max-width:600px;margin:0 auto;font-size:15px}
+.section-head.right p{margin:0}
+.section-head-row{display:flex;justify-content:space-between;align-items:end;margin-bottom:36px;flex-wrap:wrap;gap:16px}
+
+/* ===== Product Card ===== */
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
+.product-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.35s;border:1px solid var(--border);display:flex;flex-direction:column;position:relative}
+.product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--purple)}
+.product-media{position:relative;height:220px;overflow:hidden;background:var(--bg2)}
+.product-media img{width:100%;height:100%;object-fit:cover;transition:.6s;cursor:pointer}
+.product-card:hover .product-media img{transform:scale(1.08)}
+.product-badge{position:absolute;top:12px;right:12px;padding:5px 12px;border-radius:50px;font-size:11.5px;font-weight:700;color:#fff;background:var(--purple)}
+.product-badge.sale{background:var(--danger)}
+.product-badge.new{background:var(--success)}
+.fav-btn{position:absolute;top:12px;left:12px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;font-size:16px;color:var(--muted);transition:.25s;backdrop-filter:blur(6px)}
+.fav-btn:hover{background:var(--purple);color:#fff;transform:scale(1.1)}
+.fav-btn.active{background:var(--danger);color:#fff}
+.product-body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.product-brand{font-size:11.5px;color:var(--muted);font-weight:500}
+.product-title{font-size:14.5px;font-weight:700;line-height:1.5;color:var(--text);cursor:pointer;transition:.25s;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.product-title:hover{color:var(--purple)}
+.product-rating{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.product-rating .stars{color:var(--warning);font-size:13px}
+.product-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px dashed var(--border)}
+.product-price{font-size:16px;font-weight:800;color:var(--purple)}
+.product-price small{display:block;font-size:11px;color:var(--muted);font-weight:400;text-decoration:line-through}
+.add-cart-btn{width:40px;height:40px;border-radius:12px;background:var(--purple);color:#fff;display:grid;place-items:center;font-size:16px;transition:.25s}
+.add-cart-btn:hover{background:var(--purple-dark);transform:scale(1.05)}
+.add-cart-btn.added{background:var(--success)}
+
+/* ===== Filter Bar ===== */
+.shop-layout{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start}
+.filters{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border:1px solid var(--border);position:sticky;top:100px}
+.filters h3{font-size:16px;font-weight:700;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.filter-group{margin-bottom:22px}
+.filter-group label{display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:10px}
+.filter-group select,.filter-group input{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:11px;background:var(--bg2);transition:.25s;font-size:13.5px}
+.filter-group select:focus,.filter-group input:focus{outline:none;border-color:var(--purple);background:#fff}
+.checkbox-list{display:flex;flex-direction:column;gap:8px}
+.checkbox-item{display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer;padding:6px 0;transition:.25s}
+.checkbox-item:hover{color:var(--purple)}
+.checkbox-item input{width:auto;margin:0;accent-color:var(--purple)}
+.range-row{display:flex;gap:8px}
+.range-row input{flex:1}
+.range-display{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:6px}
+
+.shop-toolbar{background:#fff;padding:14px 20px;border-radius:var(--radius-sm);margin-bottom:22px;box-shadow:var(--shadow);border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.toolbar-info{font-size:14px;color:var(--muted)}
+.toolbar-info strong{color:var(--purple);font-size:16px}
+.toolbar-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.toolbar-controls select{padding:9px 12px;border:1.5px solid var(--border);border-radius:10px;background:var(--bg2);font-size:13px}
+.filter-toggle{display:none}
+
+/* ===== Product Detail ===== */
+.product-detail{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;padding:30px 0}
+.detail-gallery{position:sticky;top:100px}
+.detail-main-img{border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:var(--shadow);margin-bottom:14px}
+.detail-main-img img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.detail-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.detail-thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;cursor:pointer;opacity:.6;transition:.25s;border:2px solid transparent}
+.detail-thumbs img:hover,.detail-thumbs img.active{opacity:1;border-color:var(--purple)}
+.detail-info h1{font-size:clamp(20px,2.8vw,28px);font-weight:800;margin-bottom:12px;line-height:1.4}
+.detail-brand{font-size:13px;color:var(--muted);margin-bottom:14px}
+.detail-rating{display:flex;align-items:center;gap:10px;margin-bottom:18px;font-size:13px;color:var(--muted)}
+.detail-rating .stars{color:var(--warning);font-size:16px}
+.detail-price-box{background:var(--bg2);border-radius:14px;padding:18px;margin-bottom:20px}
+.detail-price{font-size:26px;font-weight:800;color:var(--purple);display:flex;align-items:baseline;gap:10px}
+.detail-price small{font-size:14px;color:var(--muted);text-decoration:line-through;font-weight:400}
+.detail-stock{color:var(--success);font-size:13px;font-weight:600;margin-top:8px}
+.detail-desc{color:var(--muted);line-height:2;margin-bottom:20px}
+.detail-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
+.spec-item{background:var(--bg2);padding:12px;border-radius:10px;font-size:13px}
+.spec-item strong{display:block;color:var(--purple);font-size:12px;font-weight:600;margin-bottom:4px}
+.qty-box{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.qty-control{display:flex;align-items:center;background:#fff;border:1.5px solid var(--border);border-radius:12px;overflow:hidden}
+.qty-control button{width:42px;height:42px;font-size:18px;font-weight:700;color:var(--purple);transition:.25s}
+.qty-control button:hover{background:var(--bg2)}
+.qty-control input{width:50px;text-align:center;border:none;font-weight:700;font-size:15px;background:transparent}
+.qty-control input:focus{outline:none}
+.detail-btns{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ===== Cart ===== */
+.cart-layout{display:grid;grid-template-columns:1fr 360px;gap:30px;align-items:start}
+.cart-item{background:#fff;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);border:1px solid var(--border);display:grid;grid-template-columns:100px 1fr auto;gap:16px;align-items:center;margin-bottom:14px;transition:.25s}
+.cart-item img{width:100px;height:100px;object-fit:cover;border-radius:12px;background:var(--bg2)}
+.cart-item-info h4{font-size:14.5px;font-weight:700;margin-bottom:6px}
+.cart-item-info .brand{font-size:12px;color:var(--muted);margin-bottom:8px}
+.cart-item-info .price{color:var(--purple);font-weight:700;font-size:15px}
+.cart-item-actions{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.remove-btn{color:var(--danger);font-size:18px;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;transition:.25s}
+.remove-btn:hover{background:#fef2f2}
+
+.cart-summary{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border:1px solid var(--border);position:sticky;top:100px}
+.cart-summary h3{font-size:17px;font-weight:700;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.summary-row{display:flex;justify-content:space-between;font-size:14px;padding:10px 0;color:var(--muted)}
+.summary-row.total{font-size:16px;font-weight:800;color:var(--purple);padding-top:16px;border-top:2px dashed var(--border);margin-top:10px}
+.cart-empty{text-align:center;padding:80px 20px;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow)}
+.cart-empty-icon{font-size:70px;color:var(--border);margin-bottom:20px}
+.cart-empty h3{margin-bottom:10px;color:var(--text)}
+.cart-empty p{color:var(--muted);margin-bottom:24px}
+
+/* ===== Features ===== */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.feature-card{background:#fff;padding:26px 22px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);text-align:center;transition:.3s}
+.feature-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--purple)}
+.feature-icon{width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,var(--bg2),#fff);display:grid;place-items:center;font-size:28px;margin:0 auto 16px;transition:.3s}
+.feature-card:hover .feature-icon{background:linear-gradient(135deg,var(--purple),var(--cyan));color:#fff}
+.feature-card h4{font-size:15.5px;font-weight:700;margin-bottom:8px}
+.feature-card p{color:var(--muted);font-size:13.5px}
+
+/* ===== Newsletter ===== */
+.newsletter-box{background:linear-gradient(135deg,var(--purple),var(--purple-dark));border-radius:24px;padding:60px 40px;text-align:center;position:relative;overflow:hidden;color:#fff}
+.newsletter-box::before{content:"";position:absolute;top:-50%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(6,182,212,.3),transparent 65%);border-radius:50%}
+.newsletter-box h3{font-size:clamp(20px,2.8vw,30px);font-weight:800;margin-bottom:12px;position:relative}
+.newsletter-box p{opacity:.85;margin-bottom:26px;position:relative;max-width:480px;margin-inline:auto}
+.newsletter-form{display:flex;max-width:440px;margin:0 auto;background:#fff;border-radius:14px;overflow:hidden;position:relative;padding:6px}
+.newsletter-form input{flex:1;padding:12px 18px;border:none;background:transparent;font-size:14px}
+.newsletter-form input:focus{outline:none}
+.newsletter-form button{padding:12px 24px;background:linear-gradient(135deg,var(--purple),var(--cyan));color:#fff;border-radius:10px;font-weight:700;font-size:14px}
+
+/* ===== Testimonials ===== */
+.tstm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.tstm-card{background:#fff;padding:26px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);position:relative}
+.tstm-stars{color:var(--warning);font-size:15px;margin-bottom:12px}
+.tstm-text{color:var(--text);font-size:14px;margin-bottom:18px;line-height:1.9}
+.tstm-user{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--border)}
+.tstm-user img{width:48px;height:48px;border-radius:50%;object-fit:cover;background:var(--bg2)}
+.tstm-user strong{display:block;font-size:14px}
+.tstm-user small{color:var(--muted);font-size:12px}
+
+/* ===== Footer ===== */
+.footer{background:#1e1b4b;color:rgba(255,255,255,.72);padding:70px 0 0;margin-top:80px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.4fr;gap:36px;padding-bottom:50px}
+.footer h5{color:#fff;font-size:15px;font-weight:700;margin-bottom:20px;position:relative;padding-bottom:12px}
+.footer h5::after{content:"";position:absolute;bottom:0;right:0;width:32px;height:2px;background:var(--cyan)}
+.footer p,.footer li{font-size:13.5px;line-height:2}
+.footer ul{list-style:none}
+.footer ul li a{transition:.25s;display:block;padding:4px 0}
+.footer ul li a:hover{color:var(--cyan-light);padding-right:6px}
+.footer-contact li{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.footer-contact i{color:var(--cyan);margin-top:6px;font-style:normal}
+.footer-socials{display:flex;gap:10px;margin-top:20px}
+.footer-socials a{width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.06);display:grid;place-items:center;color:#fff;transition:.28s;border:1px solid rgba(255,255,255,.08)}
+.footer-socials a:hover{background:var(--purple);transform:translateY(-3px);border-color:var(--purple)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:22px 0;text-align:center;font-size:13px}
+
+/* ===== Page Head ===== */
+.page-head{padding:130px 0 50px;background:linear-gradient(135deg,#faf5ff,#f0f9ff);text-align:center;position:relative;overflow:hidden}
+.page-head::before{content:"";position:absolute;top:-40%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(109,40,217,.1),transparent 65%);border-radius:50%}
+.page-head h1{font-size:clamp(24px,3.8vw,38px);font-weight:800;position:relative;margin-bottom:8px}
+.page-head p{color:var(--muted);position:relative;font-size:14px}
+.breadcrumb{display:flex;gap:8px;justify-content:center;margin-top:16px;font-size:13px;color:var(--muted);position:relative}
+.breadcrumb a:hover{color:var(--purple)}
+
+/* ===== Forms ===== */
+.form-card{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);border:1px solid var(--border)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-grid .full{grid-column:1/-1}
+.form-group{display:flex;flex-direction:column;gap:7px}
+.form-group label{font-size:13px;font-weight:600}
+.form-group label .req{color:var(--danger)}
+.form-group input,.form-group select,.form-group textarea{padding:12px 14px;border:1.5px solid var(--border);border-radius:11px;background:var(--bg2);transition:.25s}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--purple);background:#fff;box-shadow:0 0 0 4px rgba(109,40,217,.1)}
+.form-group input.err,.form-group select.err,.form-group textarea.err{border-color:var(--danger);background:#fef2f2}
+.err-msg{color:var(--danger);font-size:12px;min-height:0}
+
+/* ===== About ===== */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg)}
+.about-img img{width:100%;height:100%;min-height:400px;object-fit:cover}
+.features-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+.feature-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500}
+.feature-item i{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--cyan));color:#fff;display:grid;place-items:center;font-size:12px;flex-shrink:0;font-style:normal;font-weight:700}
+
+/* ===== Stats ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px}
+.stat-card{background:#fff;padding:26px 18px;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow);border:1px solid var(--border)}
+.stat-num{font-size:34px;font-weight:800;background:linear-gradient(135deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.stat-label{color:var(--muted);font-size:13.5px;margin-top:10px}
+
+/* ===== Toast ===== */
+.toast{position:fixed;bottom:24px;right:24px;z-index:9999;background:#fff;padding:14px 20px;border-radius:14px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:12px;font-size:14px;transform:translateY(150%);transition:.4s cubic-bezier(.4,0,.2,1);max-width:340px;border-right:4px solid var(--purple)}
+.toast.show{transform:translateY(0)}
+.toast.success{border-right-color:var(--success)}
+.toast.error{border-right-color:var(--danger)}
+.toast-icon{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-size:16px;flex-shrink:0;background:var(--bg2)}
+.toast.success .toast-icon{background:#d1fae5;color:var(--success)}
+.toast.error .toast-icon{background:#fee2e2;color:var(--danger)}
+.toast strong{display:block;font-size:13.5px}
+.toast small{color:var(--muted);font-size:12px}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:.8s cubic-bezier(.4,0,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media(max-width:1024px){
+  .nav{display:none}
+  .menu-toggle{display:flex}
+  .hero-inner{grid-template-columns:1fr;text-align:center;gap:30px}
+  .hero p{margin-inline:auto}
+  .hero-btns{justify-content:center}
+  .hero-features{justify-content:center}
+  .hero-float{display:none}
+  .shop-layout{grid-template-columns:1fr}
+  .filters{position:fixed;top:0;right:0;bottom:0;width:88%;max-width:340px;z-index:1200;border-radius:0;overflow-y:auto;transform:translateX(100%);transition:.35s;box-shadow:-10px 0 40px rgba(0,0,0,.2)}
+  .filters.open{transform:translateX(0)}
+  .filters-close{display:block!important}
+  .filters-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1199;opacity:0;visibility:hidden;transition:.3s}
+  .filters-overlay.open{opacity:1;visibility:visible}
+  .filter-toggle{display:inline-flex}
+  .product-detail{grid-template-columns:1fr;gap:30px}
+  .detail-gallery{position:static}
+  .cart-layout{grid-template-columns:1fr}
+  .cart-summary{position:static}
+  .about-grid{grid-template-columns:1fr;gap:30px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .filters-close{display:none;position:absolute;top:14px;left:14px;width:38px;height:38px;border-radius:10px;background:var(--bg2);font-size:20px}
+}
+@media(max-width:640px){
+  .header-inner{height:68px}
+  .mobile-menu,.search-bar{top:68px}
+  .hero{padding:100px 0 50px}
+  .section{padding:50px 0}
+  .cart-item{grid-template-columns:80px 1fr;gap:12px}
+  .cart-item img{width:80px;height:80px}
+  .cart-item-actions{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center;width:100%}
+  .form-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .features-list{grid-template-columns:1fr}
+  .newsletter-box{padding:40px 22px}
+  .newsletter-form{flex-direction:column;padding:12px}
+  .newsletter-form button{padding:12px}
+  .toast{right:14px;left:14px;bottom:14px;max-width:none}
+  .detail-specs{grid-template-columns:1fr}
+  .products-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .product-media{height:150px}
+  .product-body{padding:12px;gap:6px}
+  .product-title{font-size:13px}
+  .product-price{font-size:14px}
+  .add-cart-btn{width:36px;height:36px;font-size:14px}
+  .section-head-row{flex-direction:column;align-items:stretch;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#/" class="logo" onclick="go('home')">
+      <div class="logo-mark">گ</div>
+      <span>گجت‌لند</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#/" data-route="home">خانه</a>
+      <a href="#/shop" data-route="shop">فروشگاه</a>
+      <a href="#/categories" data-route="categories">دسته‌بندی‌ها</a>
+      <a href="#/about" data-route="about">درباره ما</a>
+      <a href="#/contact" data-route="contact">تماس</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-toggle" id="searchToggle" aria-label="جستجو">🔍</button>
+      <a href="#/cart" class="cart-btn" aria-label="سبد خرید">
+        🛒<span class="cart-badge hidden" id="cartBadge">۰</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="منو" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="search-bar" id="searchBar">
+  <div class="container">
+    <input type="text" id="globalSearch" placeholder="جستجوی محصول... (مثلاً هدفون، ساعت هوشمند)" autocomplete="off">
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#/" data-route="home">خانه</a>
+  <a href="#/shop" data-route="shop">فروشگاه</a>
+  <a href="#/categories" data-route="categories">دسته‌بندی‌ها</a>
+  <a href="#/cart" data-route="cart">سبد خرید</a>
+  <a href="#/about" data-route="about">درباره ما</a>
+  <a href="#/contact" data-route="contact">تماس با ما</a>
+</div>
+
+<main id="app"></main>
+
+<noscript>
+  <div style="padding:100px 20px;text-align:center;font-family:Tahoma;background:#faf5ff;min-height:100vh;display:flex;align-items:center;justify-content:center">
+    <div style="max-width:500px">
+      <div style="font-size:60px;margin-bottom:20px">⚠️</div>
+      <h1 style="color:#1e293b;font-size:22px;margin-bottom:14px">جاوااسکریپت غیرفعال است</h1>
+      <p style="color:#64748b;line-height:2">برای مشاهده فروشگاه، لطفاً جاوااسکریپت مرورگر خود را فعال کنید.</p>
+    </div>
+  </div>
+</noscript>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:20px;margin-bottom:16px">
+          <div style="width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#6d28d9,#06b6d4);display:grid;place-items:center;font-size:22px">گ</div>
+          <span>گجت‌لند</span>
+        </div>
+        <p>گجت‌لند، فروشگاه آنلاین لوازم دیجیتال و گجت‌های مدرن. با ضمانت اصالت کالا و ارسال سریع به سراسر کشور، در خدمت شما هستیم.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="اینستاگرام">◉</a>
+          <a href="#" aria-label="تلگرام">✈</a>
+          <a href="#" aria-label="واتساپ">✆</a>
+          <a href="#" aria-label="لینکدین">in</a>
+        </div>
+      </div>
+      <div>
+        <h5>دسترسی سریع</h5>
+        <ul>
+          <li><a href="#/">صفحه اصلی</a></li>
+          <li><a href="#/shop">فروشگاه</a></li>
+          <li><a href="#/categories">دسته‌بندی‌ها</a></li>
+          <li><a href="#/about">درباره ما</a></li>
+          <li><a href="#/contact">تماس با ما</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>خدمات مشتریان</h5>
+        <ul>
+          <li><a href="#/shop">رهگیری سفارش</a></li>
+          <li><a href="#/shop">شرایط مرجوعی</a></li>
+          <li><a href="#/shop">ضمانت اصالت</a></li>
+          <li><a href="#/shop">ارسال سریع</a></li>
+          <li><a href="#/contact">پشتیبانی</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>ارتباط با ما</h5>
+        <ul class="footer-contact">
+          <li><i>☎</i><span>۰۲۱-۹۱۰۰۸۸۷۷</span></li>
+          <li><i>✉</i><span>info@gadgetland.ir</span></li>
+          <li><i>⌂</i><span>تهران، خیابان ولیعصر، برج تجاری نور، طبقه ۵</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">© ۱۴۰۴ گجت‌لند — تمامی حقوق محفوظ است. طراحی و توسعه اختصاصی.</div>
+  </div>
+</footer>
+
+<div class="filters-overlay" id="filtersOverlay"></div>
+
+<script>
+/* ============================================================
+   DATA
+============================================================ */
+const CATEGORIES = [
+  {id:'headphone', label:'هدفون و هندزفری', icon:'🎧'},
+  {id:'watch', label:'ساعت هوشمند', icon:'⌚'},
+  {id:'powerbank', label:'پاوربانک', icon:'🔋'},
+  {id:'speaker', label:'اسپیکر', icon:'🔊'},
+  {id:'charger', label:'شارژر و کابل', icon:'🔌'},
+  {id:'accessory', label:'لوازم جانبی', icon:'📱'}
+];
+
+const PRODUCTS = [
+  {
+    id:1, name:'هدفون بی‌سیم سونی WH-1000XM5',
+    category:'headphone', brand:'Sony',
+    price:18500000, oldPrice:22000000,
+    rating:4.9, reviews:245,
+    badge:'sale',
+    img:'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'هدفون بی‌سیم سونی با فناوری حذف نویز فعال (ANC)، کیفیت صدای Hi-Res و عمر باتری ۳۰ ساعته. مناسب برای سفر، کار و ورزش.',
+    specs:{'نوع':'دور گوشی','اتصال':'بلوتوث ۵.۲','باتری':'۳۰ ساعت','حذف نویز':'فعال (ANC)','وزن':'۲۵۰ گرم','گارانتی':'۱۸ ماه'}
+  },
+  {
+    id:2, name:'ساعت هوشمند اپل واچ سری ۹',
+    category:'watch', brand:'Apple',
+    price:24500000, oldPrice:28000000,
+    rating:4.8, reviews:189,
+    badge:'new',
+    img:'https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'ساعت هوشمند اپل واچ سری ۹ با نمایشگر Retina همیشه روشن، سنسور ضربان قلب، ECG و GPS داخلی. مقاوم در برابر آب تا ۵۰ متر.',
+    specs:{'نمایشگر':'Retina LTPO OLED','باتری':'۱۸ ساعت','مقاومت':'۵۰ متر ضدآب','سنسور':'ضربان قلب، ECG','اتصال':'GPS + Cellular','گارانتی':'۱۲ ماه'}
+  },
+  {
+    id:3, name:'پاوربانک انکر ۲۰۰۰۰ میلی‌آمپر',
+    category:'powerbank', brand:'Anker',
+    price:3200000, oldPrice:3900000,
+    rating:4.7, reviews:412,
+    badge:'sale',
+    img:'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'پاوربانک ۲۰۰۰۰ میلی‌آمپری انکر با شارژ سریع ۶۵ وات، دو پورت USB-A و یک پورت USB-C. شارژ همزمان ۳ دستگاه.',
+    specs:{'ظرفیت':'۲۰۰۰۰ mAh','توان':'۶۵ وات','پورت':'۲×USB-A، ۱×USB-C','وزن':'۳۴۰ گرم','گارانتی':'۱۸ ماه','ویژگی':'شارژ سریع'}
+  },
+  {
+    id:4, name:'اسپیکر بلوتوث JBL Charge 5',
+    category:'speaker', brand:'JBL',
+    price:7800000, oldPrice:0,
+    rating:4.6, reviews:328,
+    badge:'',
+    img:'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'اسپیکر بلوتوث JBL Charge 5 با صدای قوی و بیس عمیق، ضدآب IPX67 و عمر باتری ۲۰ ساعته. قابل استفاده به عنوان پاوربانک.',
+    specs:{'توان':'۴۰ وات','باتری':'۲۰ ساعت','ضدآب':'IPX67','اتصال':'بلوتوث ۵.۱','وزن':'۹۶۰ گرم','گارانتی':'۱۲ ماه'}
+  },
+  {
+    id:5, name:'شارژر سریع انکر ۶۵ وات',
+    category:'charger', brand:'Anker',
+    price:1450000, oldPrice:0,
+    rating:4.8, reviews:567,
+    badge:'new',
+    img:'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'شارژر سریع ۶۵ وات انکر با پورت USB-C و USB-A، سازگار با لپ‌تاپ، موبایل و تبلت. طراحی جمع و جور و قابل حمل.',
+    specs:{'توان':'۶۵ وات','پورت':'۱×USB-C، ۱×USB-A','سازگاری':'لپ‌تاپ، موبایل، تبلت','وزن':'۱۳۰ گرم','گارانتی':'۲۴ ماه','ویژگی':'شارژ سریع'}
+  },
+  {
+    id:6, name:'هندزفری بی‌سیم ایرپاد پرو ۲',
+    category:'headphone', brand:'Apple',
+    price:15900000, oldPrice:18500000,
+    rating:4.9, reviews:892,
+    badge:'sale',
+    img:'https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'ایرپاد پرو ۲ با حذف نویز فعال، حالت شفافیت و صدای فضایی. مقاوم در برابر عرق و آب، مناسب ورزش و استفاده روزمره.',
+    specs:{'نوع':'درون گوشی','اتصال':'بلوتوث ۵.۳','باتری':'۶ ساعت (۳۰ با کیس)','حذف نویز':'فعال (ANC)','مقاومت':'IPX4','گارانتی':'۱۲ ماه'}
+  },
+  {
+    id:7, name:'ساعت هوشمند سامسونگ Galaxy Watch 6',
+    category:'watch', brand:'Samsung',
+    price:12800000, oldPrice:0,
+    rating:4.7, reviews:234,
+    badge:'',
+    img:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'ساعت هوشمند سامسونگ Galaxy Watch 6 با نمایشگر AMOLED، سنسور ترکیب بدن و پایش خواب پیشرفته. سازگار با اندروید.',
+    specs:{'نمایشگر':'Super AMOLED','باتری':'۴۰ ساعت','مقاومت':'۵ ATM','سنسور':'ضربان، اکسیژن خون','اتصال':'بلوتوث، Wi-Fi','گارانتی':'۱۸ ماه'}
+  },
+  {
+    id:8, name:'پاوربانک مگ‌سیف اپل',
+    category:'powerbank', brand:'Apple',
+    price:4500000, oldPrice:0,
+    rating:4.5, reviews:178,
+    badge:'new',
+    img:'https://images.unsplash.com/photo-1618410320928-25228d811631?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1618410320928-25228d811631?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'پاوربانک مگ‌سیف اپل با اتصال مغناطیسی به آیفون، شارژ بی‌سیم سریع و طراحی فوق‌نازک. بدون نیاز به کابل.',
+    specs:{'ظرفیت':'۵۰۰۰ mAh','اتصال':'مگ‌سیف مغناطیسی','سازگاری':'iPhone 12 و بالاتر','وزن':'۱۱۳ گرم','گارانتی':'۱۲ ماه','ویژگی':'شارژ بی‌سیم'}
+  },
+  {
+    id:9, name:'اسپیکر بلوتوث Bose SoundLink',
+    category:'speaker', brand:'Bose',
+    price:11500000, oldPrice:13500000,
+    rating:4.8, reviews:156,
+    badge:'sale',
+    img:'https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'اسپیکر بلوتوث Bose با کیفیت صدای بی‌نظیر، طراحی شیک و باتری ۱۲ ساعته. مناسب برای استفاده در خانه و سفر.',
+    specs:{'توان':'۳۰ وات','باتری':'۱۲ ساعت','ضدآب':'IPX4','اتصال':'بلوتوث ۴.۲','وزن':'۶۸۰ گرم','گارانتی':'۱۲ ماه'}
+  },
+  {
+    id:10, name:'کابل تایپ-سی بافته شده انکر',
+    category:'accessory', brand:'Anker',
+    price:450000, oldPrice:0,
+    rating:4.6, reviews:923,
+    badge:'',
+    img:'https://images.unsplash.com/photo-1588343959777-8f5b5e85e2c4?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1588343959777-8f5b5e85e2c4?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'کابل تایپ-سی بافته شده انکر با طول ۱.۸ متر، سرعت شارژ ۶۰ وات و انتقال داده ۴۸۰ Mbps. مقاوم در برابر پارگی.',
+    specs:{'نوع':'USB-C to USB-C','توان':'۶۰ وات','طول':'۱.۸ متر','انتقال داده':'۴۸۰ Mbps','گارانتی':'۲۴ ماه','ویژگی':'بافته شده'}
+  },
+  {
+    id:11, name:'شارژر بی‌سیم سامسونگ ۱۵ وات',
+    category:'charger', brand:'Samsung',
+    price:1850000, oldPrice:2200000,
+    rating:4.5, reviews:234,
+    badge:'sale',
+    img:'https://images.unsplash.com/photo-1591290619762-c1d5a0c8d7d6?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1591290619762-c1d5a0c8d7d6?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'شارژر بی‌سیم سامسونگ با توان ۱۵ وات، شارژ سریع موبایل و ایرپاد. طراحی مدرن و صفحه ضدلغزش.',
+    specs:{'توان':'۱۵ وات','نوع':'بی‌سیم','سازگاری':'موبایل‌های Qi','وزن':'۱۲۰ گرم','گارانتی':'۱۲ ماه','ویژگی':'شارژ سریع'}
+  },
+  {
+    id:12, name:'هندزفری بلوتوث Galaxy Buds 2',
+    category:'headphone', brand:'Samsung',
+    price:6200000, oldPrice:0,
+    rating:4.6, reviews:412,
+    badge:'',
+    img:'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80',
+    gallery:[
+      'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80'
+    ],
+    desc:'هندزفری بلوتوث Galaxy Buds 2 با صدای فراگیر، حذف نویز فعال و طراحی سبک و راحت. مناسب ورزش و استفاده روزمره.',
+    specs:{'نوع':'درون گوشی','اتصال':'بلوتوث ۵.۲','باتری':'۵ ساعت (۲۰ با کیس)','حذف نویز':'فعال (ANC)','مقاومت':'IPX2','گارانتی':'۱۲ ماه'}
+  }
+];
+
+/* ============================================================
+   HELPERS
+============================================================ */
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const toFa = n => Number(n).toLocaleString('fa-IR');
+const toFaDigits = s => String(s).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+
+function formatPrice(p){
+  if(!p) return '۰ تومان';
+  if(p >= 1e6){
+    const v = p / 1e6;
+    return toFa(v % 1 === 0 ? v : v.toFixed(1)) + ' میلیون تومان';
+  }
+  return toFa(p) + ' تومان';
+}
+
+function stars(n){
+  const full = Math.floor(n);
+  let s = '';
+  for(let i=0;i<5;i++){
+    s += i < full ? '★' : '☆';
+  }
+  return s;
+}
+
+/* ============================================================
+   STATE
+============================================================ */
+const state = {
+  route:'home',
+  productId:null,
+  favorites: JSON.parse(localStorage.getItem('gl_favs') || '[]'),
+  cart: JSON.parse(localStorage.getItem('gl_cart') || '[]'),
+  filters:{
+    category:'all',
+    brand:'all',
+    search:'',
+    minPrice:0,
+    maxPrice:100000000,
+    sort:'newest'
+  },
+  detailGalleryIdx:0,
+  detailQty:1
+};
+
+function saveFavs(){ localStorage.setItem('gl_favs', JSON.stringify(state.favorites)); }
+function saveCart(){ localStorage.setItem('gl_cart', JSON.stringify(state.cart)); updateCartBadge(); }
+
+function updateCartBadge(){
+  const badge = $('#cartBadge');
+  if(!badge) return;
+  const total = state.cart.reduce((s,i)=>s+i.qty,0);
+  if(total > 0){ badge.textContent = toFa(total); badge.classList.remove('hidden'); }
+  else { badge.classList.add('hidden'); }
+}
+
+function isFav(id){ return state.favorites.includes(id); }
+function toggleFav(id, e){
+  if(e) e.stopPropagation();
+  const i = state.favorites.indexOf(id);
+  if(i > -1){ state.favorites.splice(i,1); toast('حذف شد','از علاقه‌مندی‌ها حذف شد','error'); }
+  else { state.favorites.push(id); toast('ذخیره شد','به علاقه‌مندی‌ها اضافه شد','success'); }
+  saveFavs();
+  rerender();
+}
+
+function addToCart(id, qty, e){
+  if(e) e.stopPropagation();
+  qty = qty || 1;
+  const existing = state.cart.find(i=>i.id === id);
+  if(existing){ existing.qty += qty; }
+  else { state.cart.push({id, qty}); }
+  saveCart();
+  toast('افزوده شد','محصول به سبد خرید اضافه شد','success');
+  if(state.route === 'shop') renderShopGrid();
+  if(state.route === 'cart') rerender();
+}
+
+function removeFromCart(id){
+  state.cart = state.cart.filter(i=>i.id !== id);
+  saveCart();
+  rerender();
+  toast('حذف شد','محصول از سبد خرید حذف شد','error');
+}
+
+function updateCartQty(id, delta){
+  const item = state.cart.find(i=>i.id === id);
+  if(!item) return;
+  item.qty = Math.max(1, item.qty + delta);
+  saveCart();
+  rerender();
+}
+
+function cartTotals(){
+  let subtotal = 0;
+  state.cart.forEach(item=>{
+    const p = PRODUCTS.find(x=>x.id === item.id);
+    if(p) subtotal += p.price * item.qty;
+  });
+  const shipping = subtotal > 5000000 ? 0 : 350000;
+  const total = subtotal + shipping;
+  return { subtotal, shipping, total, count: state.cart.length };
+}
+
+/* ============================================================
+   TOAST
+============================================================ */
+function toast(title, msg, type='success'){
+  const el = document.createElement('div');
+  el.className = 'toast ' + type;
+  const icon = type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ';
+  el.innerHTML = `<div class="toast-icon">${icon}</div><div><strong>${title}</strong><small>${msg||''}</small></div>`;
+  document.body.appendChild(el);
+  requestAnimationFrame(()=> el.classList.add('show'));
+  setTimeout(()=>{ el.classList.remove('show'); setTimeout(()=> el.remove(), 400); }, 3000);
+}
+
+/* ============================================================
+   ROUTER
+============================================================ */
+function go(route){ location.hash = '#/' + (route || ''); }
+
+function parseHash(){
+  const h = location.hash.replace(/^#\/?/, '') || 'home';
+  const [path, query] = h.split('?');
+  const parts = path.split('/').filter(Boolean);
+  const params = {};
+  if(query) query.split('&').forEach(kv=>{
+    const [k,v] = kv.split('=');
+    params[decodeURIComponent(k)] = decodeURIComponent(v||'');
+  });
+  return { path: parts[0] || 'home', id: parts[1] ? Number(parts[1]) : null, params };
+}
+
+function handleRoute(){
+  const { path, id, params } = parseHash();
+  state.route = path;
+  state.productId = id;
+  state.detailGalleryIdx = 0;
+  state.detailQty = 1;
+
+  if(path === 'shop'){
+    if(params.cat) state.filters.category = params.cat;
+    if(params.q) state.filters.search = params.q;
+  }
+
+  window.scrollTo({top:0, behavior:'auto'});
+  rerender();
+  updateActiveNav(path);
+  closeMobileMenu();
+}
+
+function updateActiveNav(path){
+  $$('[data-route]').forEach(a=>{
+    a.classList.toggle('active', a.dataset.route === path);
+  });
+}
+
+function rerender(){
+  const app = $('#app');
+  const { path, id } = parseHash();
+  let html = '';
+
+  switch(path){
+    case 'shop': html = renderShop(); break;
+    case 'product': html = renderProduct(id); break;
+    case 'cart': html = renderCart(); break;
+    case 'categories': html = renderCategories(); break;
+    case 'about': html = renderAbout(); break;
+    case 'contact': html = renderContact(); break;
+    case 'home':
+    default: html = renderHome(); break;
+  }
+
+  app.innerHTML = html;
+  initReveal();
+  initStatsCounters();
+
+  if(path === 'shop') renderShopGrid();
+  if(path === 'cart') updateCartBadge();
+}
+
+/* ============================================================
+   HOME
+============================================================ */
+function renderHome(){
+  const featured = PRODUCTS.filter(p=>p.badge).slice(0,8);
+  const newest = [...PRODUCTS].sort((a,b)=>b.id-a.id).slice(0,4);
+  return `
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="hero-badge">✨ ارسال رایگان برای خرید بالای ۵ میلیون</div>
+        <h1>گجت‌های <span>مدرن</span>،<br>با ضمانت اصالت کالا</h1>
+        <p>از هدفون‌های حرفه‌ای تا ساعت‌های هوشمند؛ جدیدترین گجت‌ها را با بهترین قیمت و ارسال سریع از گجت‌لند بخرید.</p>
+        <div class="hero-btns">
+          <a href="#/shop" class="btn btn-primary btn-lg">مشاهده فروشگاه ←</a>
+          <a href="#/categories" class="btn btn-outline btn-lg">دسته‌بندی‌ها</a>
+        </div>
+        <div class="hero-features">
+          <div class="hero-feature"><i>🚚</i> ارسال سریع</div>
+          <div class="hero-feature"><i>🛡</i> ضمانت اصالت</div>
+          <div class="hero-feature"><i>↩</i> ۷ روز مرجوعی</div>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80" alt="هدفون بی‌سیم سونی">
+        <div class="hero-float hero-float-1">🔥 ۴۵٪ تخفیف ویژه</div>
+        <div class="hero-float hero-float-2">⭐ ۴.۹ امتیاز کاربران</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cats-section">
+    <div class="container">
+      <div class="section-head-row">
+        <div>
+          <span class="section-eyebrow">دسته‌بندی‌ها</span>
+          <h2 style="font-size:clamp(20px,2.6vw,28px);font-weight:800">خرید بر اساس دسته</h2>
+        </div>
+        <a href="#/categories" class="btn btn-ghost">مشاهده همه ←</a>
+      </div>
+      <div class="cats-grid">
+        ${CATEGORIES.map(c=>`
+          <a href="#/shop?cat=${c.id}" class="cat-card reveal">
+            <div class="cat-icon">${c.icon}</div>
+            <h4>${c.label}</h4>
+          </a>
+        `).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:30px">
+    <div class="container">
+      <div class="section-head-row">
+        <div>
+          <span class="section-eyebrow">پیشنهاد ویژه</span>
+          <h2 style="font-size:clamp(20px,2.6vw,28px);font-weight:800">محصولات با تخفیف</h2>
+        </div>
+        <a href="#/shop" class="btn btn-ghost">همه محصولات ←</a>
+      </div>
+      <div class="products-grid">
+        ${featured.map(productCard).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">چرا گجت‌لند؟</span>
+        <h2>تجربه خرید مطمئن و سریع</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal"><div class="feature-icon">🚚</div><h4>ارسال سریع</h4><p>ارسال به سراسر کشور در کمترین زمان ممکن</p></div>
+        <div class="feature-card reveal"><div class="feature-icon">🛡</div><h4>ضمانت اصالت</h4><p>تضمین اصل بودن تمام محصولات</p></div>
+        <div class="feature-card reveal"><div class="feature-icon">↩</div><h4>۷ روز مرجوعی</h4><p>امکان بازگشت کالا تا ۷ روز</p></div>
+        <div class="feature-card reveal"><div class="feature-icon">💳</div><h4>پرداخت امن</h4><p>پرداخت آنلاین با درگاه‌های معتبر</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head-row">
+        <div>
+          <span class="section-eyebrow">جدیدترین‌ها</span>
+          <h2 style="font-size:clamp(20px,2.6vw,28px);font-weight:800">تازه‌های گجت‌لند</h2>
+        </div>
+        <a href="#/shop" class="btn btn-ghost">مشاهده همه ←</a>
+      </div>
+      <div class="products-grid">
+        ${newest.map(productCard).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="newsletter-box reveal">
+        <h3>از تخفیف‌های ویژه باخبر شو!</h3>
+        <p>با عضویت در خبرنامه گجت‌لند، جدیدترین محصولات و تخفیف‌ها را در ایمیل خود دریافت کنید.</p>
+        <form class="newsletter-form" onsubmit="subscribeNews(event)">
+          <input type="email" placeholder="ایمیل خود را وارد کنید" required>
+          <button type="submit">عضویت</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">نظرات مشتریان</span>
+        <h2>تجربه خریداران گجت‌لند</h2>
+      </div>
+      <div class="tstm-grid">
+        <div class="tstm-card reveal">
+          <div class="tstm-stars">★★★★★</div>
+          <p class="tstm-text">کیفیت هدفونی که خریدم فوق‌العاده بود. ارسال هم خیلی سریع انجام شد. حتماً دوباره خرید می‌کنم.</p>
+          <div class="tstm-user"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="آقای رضایی"><div><strong>علی رضایی</strong><small>خریدار هدفون</small></div></div>
+        </div>
+        <div class="tstm-card reveal">
+          <div class="tstm-stars">★★★★★</div>
+          <p class="tstm-text">قیمت‌ها واقعاً منصفانه‌ست و پشتیبانی هم خیلی خوب جواب می‌ده. تجربه خرید عالی داشتم.</p>
+          <div class="tstm-user"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="خانم محمدی"><div><strong>سارا محمدی</strong><small>خریدار ساعت هوشمند</small></div></div>
+        </div>
+        <div class="tstm-card reveal">
+          <div class="tstm-stars">★★★★★</div>
+          <p class="tstm-text">بسته‌بندی محصولات خیلی حرفه‌ای بود. ضمانت اصالت کالا هم باعث می‌شه با خیال راحت خرید کنم.</p>
+          <div class="tstm-user"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80" alt="آقای کریمی"><div><strong>رضا کریمی</strong><small>خریدار پاوربانک</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+/* ============================================================
+   PRODUCT CARD
+============================================================ */
+function productCard(p){
+  const fav = isFav(p.id);
+  const discount = p.oldPrice ? Math.round((1 - p.price/p.oldPrice) * 100) : 0;
+  return `
+  <div class="product-card reveal">
+    <div class="product-media" onclick="location.hash='#/product/${p.id}'">
+      <img src="${p.img}" alt="${p.name}" loading="lazy">
+      ${p.badge === 'sale' ? `<span class="product-badge sale">${toFa(discount)}٪ تخفیف</span>` : ''}
+      ${p.badge === 'new' ? '<span class="product-badge new">جدید</span>' : ''}
+      <button class="fav-btn ${fav?'active':''}" onclick="toggleFav(${p.id}, event)" title="علاقه‌مندی">${fav?'♥':'♡'}</button>
+    </div>
+    <div class="product-body">
+      <div class="product-brand">${p.brand}</div>
+      <h3 class="product-title" onclick="location.hash='#/product/${p.id}'">${p.name}</h3>
+      <div class="product-rating">
+        <span class="stars">${stars(p.rating)}</span>
+        <span>${toFa(p.rating)} (${toFa(p.reviews)} نظر)</span>
+      </div>
+      <div class="product-foot">
+        <div class="product-price">
+          ${formatPrice(p.price)}
+          ${p.oldPrice ? `<small>${formatPrice(p.oldPrice)}</small>` : ''}
+        </div>
+        <button class="add-cart-btn" onclick="addToCart(${p.id}, 1, event)" title="افزودن به سبد">🛒</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ============================================================
+   SHOP
+============================================================ */
+function renderShop(){
+  const brands = [...new Set(PRODUCTS.map(p=>p.brand))];
+  return `
+  <div class="page-head">
+    <div class="container">
+      <h1>فروشگاه</h1>
+      <p>جدیدترین گجت‌ها با بهترین قیمت</p>
+      <div class="breadcrumb"><a href="#/">خانه</a><span>/</span><span>فروشگاه</span></div>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top:40px">
+    <div class="container">
+      <div class="shop-layout">
+        <aside class="filters" id="filters">
+          <button class="filters-close" onclick="closeFilters()">✕</button>
+          <h3>فیلترها <button onclick="resetFilters()" style="font-size:12px;color:var(--purple);font-weight:600">پاک کردن</button></h3>
+
+          <div class="filter-group">
+            <label>دسته‌بندی</label>
+            <select id="filterCat" onchange="applyFilter('category', this.value)">
+              <option value="all">همه دسته‌ها</option>
+              ${CATEGORIES.map(c=>`<option value="${c.id}">${c.label}</option>`).join('')}
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label>برند</label>
+            <select id="filterBrand" onchange="applyFilter('brand', this.value)">
+              <option value="all">همه برندها</option>
+              ${brands.map(b=>`<option value="${b}">${b}</option>`).join('')}
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label>محدوده قیمت (میلیون تومان)</label>
+            <div class="range-row">
+              <input type="number" id="filterMin" placeholder="از" min="0" onchange="applyFilter('minPrice', this.value)">
+              <input type="number" id="filterMax" placeholder="تا" min="0" onchange="applyFilter('maxPrice', this.value)">
+            </div>
+            <div class="range-display"><span>۰</span><span>۵۰ میلیون</span></div>
+          </div>
+
+          <div class="filter-group">
+            <label>جستجو</label>
+            <input type="text" id="filterSearch" placeholder="نام محصول..." oninput="applyFilter('search', this.value)">
+          </div>
+        </aside>
+
+        <div>
+          <div class="shop-toolbar">
+            <div class="toolbar-info"><strong id="resultCount">۰</strong> محصول پیدا شد</div>
+            <div class="toolbar-controls">
+              <button class="btn btn-outline filter-toggle" onclick="openFilters()">⚙ فیلترها</button>
+              <select id="sortSelect" onchange="applyFilter('sort', this.value)">
+                <option value="newest">جدیدترین</option>
+                <option value="cheap">ارزان‌ترین</option>
+                <option value="expensive">گران‌ترین</option>
+                <option value="rating">بیشترین امتیاز</option>
+              </select>
+            </div>
+          </div>
+          <div class="products-grid" id="shopGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderShopGrid(){
+  const grid = $('#shopGrid');
+  if(!grid) return;
+  const f = state.filters;
+
+  let list = PRODUCTS.filter(p=>{
+    if(f.category !== 'all' && p.category !== f.category) return false;
+    if(f.brand !== 'all' && p.brand !== f.brand) return false;
+    if(f.minPrice && p.price < f.minPrice * 1e6) return false;
+    if(f.maxPrice && p.price > f.maxPrice * 1e6) return false;
+    if(f.search){
+      const q = f.search.toLowerCase();
+      const blob = (p.name + ' ' + p.brand).toLowerCase();
+      if(!blob.includes(q)) return false;
+    }
+    return true;
+  });
+
+  if(f.sort === 'cheap') list.sort((a,b)=>a.price - b.price);
+  else if(f.sort === 'expensive') list.sort((a,b)=>b.price - a.price);
+  else if(f.sort === 'rating') list.sort((a,b)=>b.rating - a.rating);
+  else list.sort((a,b)=>b.id - a.id);
+
+  const count = $('#resultCount');
+  if(count) count.textContent = toFa(list.length);
+
+  const catSel = $('#filterCat'); if(catSel) catSel.value = f.category;
+  const brandSel = $('#filterBrand'); if(brandSel) brandSel.value = f.brand;
+  const sortSel = $('#sortSelect'); if(sortSel) sortSel.value = f.sort;
+  const searchIn = $('#filterSearch'); if(searchIn && searchIn.value !== f.search) searchIn.value = f.search;
+
+  if(!list.length){
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:70px 20px;background:#fff;border-radius:16px;box-shadow:var(--shadow)">
+      <div style="font-size:60px;color:var(--border);margin-bottom:16px">🔍</div>
+      <h3 style="margin-bottom:10px">محصولی پیدا نشد</h3>
+      <p style="color:var(--muted);margin-bottom:20px">فیلترها را تغییر دهید یا معیارهای دیگری امتحان کنید.</p>
+      <button class="btn btn-primary" onclick="resetFilters()">پاک کردن فیلترها</button>
+    </div>`;
+    return;
+  }
+
+  grid.innerHTML = list.map(productCard).join('');
+  initReveal();
+}
+
+function applyFilter(key, value){
+  if(key === 'minPrice' || key === 'maxPrice') value = Number(value) || 0;
+  state.filters[key] = value;
+  renderShopGrid();
+}
+
+function resetFilters(){
+  state.filters = { category:'all', brand:'all', search:'', minPrice:0, maxPrice:100000000, sort:'newest' };
+  renderShopGrid();
+}
+
+function openFilters(){ $('#filters').classList.add('open'); $('#filtersOverlay').classList.add('open'); }
+function closeFilters(){ $('#filters').classList.remove('open'); $('#filtersOverlay').classList.remove('open'); }
+
+/* ============================================================
+   PRODUCT DETAIL
+============================================================ */
+function renderProduct(id){
+  const p = PRODUCTS.find(x=>x.id === id);
+  if(!p){
+    return `<section class="section"><div class="container" style="text-align:center;padding:80px 20px">
+      <h2>محصول یافت نشد</h2>
+      <a href="#/shop" class="btn btn-primary" style="margin-top:20px">بازگشت به فروشگاه</a>
+    </div></section>`;
+  }
+
+  const fav = isFav(p.id);
+  const discount = p.oldPrice ? Math.round((1 - p.price/p.oldPrice) * 100) : 0;
+  const related = PRODUCTS.filter(x=>x.id !== p.id && x.category === p.category).slice(0,4);
+
+  return `
+  <div class="page-head" style="padding:120px 0 30px">
+    <div class="container">
+      <div class="breadcrumb" style="margin-top:0">
+        <a href="#/">خانه</a><span>/</span>
+        <a href="#/shop">فروشگاه</a><span>/</span>
+        <span>${p.name}</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top:20px">
+    <div class="container">
+      <div class="product-detail">
+        <div class="detail-gallery">
+          <div class="detail-main-img">
+            <img id="detailMainImg" src="${p.gallery[0]}" alt="${p.name}">
+          </div>
+          <div class="detail-thumbs" id="detailThumbs">
+            ${p.gallery.map((src,i)=>`<img src="${src}" alt="${p.name} - تصویر ${toFa(i+1)}" class="${i===0?'active':''}" onclick="setDetailGallery(${i})">`).join('')}
+          </div>
+        </div>
+
+        <div class="detail-info">
+          <div class="detail-brand">برند: ${p.brand}</div>
+          <h1>${p.name}</h1>
+          <div class="detail-rating">
+            <span class="stars">${stars(p.rating)}</span>
+            <span>${toFa(p.rating)} از ۵ (${toFa(p.reviews)} نظر)</span>
+          </div>
+
+          <div class="detail-price-box">
+            <div class="detail-price">
+              ${formatPrice(p.price)}
+              ${p.oldPrice ? `<small>${formatPrice(p.oldPrice)}</small>` : ''}
+              ${discount ? `<span style="background:var(--danger);color:#fff;padding:4px 10px;border-radius:50px;font-size:12px;font-weight:700">${toFa(discount)}٪ تخفیف</span>` : ''}
+            </div>
+            <div class="detail-stock">✅ موجود در انبار</div>
+          </div>
+
+          <p class="detail-desc">${p.desc}</p>
+
+          <h3 style="font-size:15px;margin-bottom:12px;color:var(--purple)">مشخصات فنی</h3>
+          <div class="detail-specs">
+            ${Object.entries(p.specs).map(([k,v])=>`
+              <div class="spec-item"><strong>${k}</strong>${v}</div>
+            `).join('')}
+          </div>
+
+          <div class="qty-box">
+            <span style="font-size:14px;font-weight:600">تعداد:</span>
+            <div class="qty-control">
+              <button type="button" onclick="changeDetailQty(-1)">−</button>
+              <input type="text" id="detailQty" value="${toFa(state.detailQty)}" readonly>
+              <button type="button" onclick="changeDetailQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="detail-btns">
+            <button class="btn btn-primary btn-lg" onclick="addToCart(${p.id}, state.detailQty)">🛒 افزودن به سبد خرید</button>
+            <button class="btn btn-outline btn-lg ${fav?'active':''}" onclick="toggleFav(${p.id}, event)">${fav?'♥ ذخیره شده':'♡ علاقه‌مندی'}</button>
+          </div>
+        </div>
+      </div>
+
+      ${related.length ? `
+        <div style="margin-top:70px">
+          <div class="section-head-row">
+            <div>
+              <span class="section-eyebrow">پیشنهاد می‌کنیم</span>
+              <h2 style="font-size:clamp(20px,2.6vw,26px);font-weight:800">محصولات مشابه</h2>
+            </div>
+          </div>
+          <div class="products-grid">${related.map(productCard).join('')}</div>
+        </div>
+      ` : ''}
+    </div>
+  </section>`;
+}
+
+function setDetailGallery(i){
+  const p = PRODUCTS.find(x=>x.id === state.productId);
+  if(!p || !p.gallery[i]) return;
+  state.detailGalleryIdx = i;
+  const mainImg = $('#detailMainImg');
+  if(mainImg) mainImg.src = p.gallery[i];
+  $$('#detailThumbs img').forEach((el, idx)=> el.classList.toggle('active', idx === i));
+}
+
+function changeDetailQty(delta){
+  state.detailQty = Math.max(1, state.detailQty + delta);
+  const inp = $('#detailQty');
+  if(inp) inp.value = toFa(state.detailQty);
+}
+
+/* ============================================================
+   CART
+============================================================ */
+function renderCart(){
+  if(!state.cart.length){
+    return `
+    <div class="page-head">
+      <div class="container">
+        <h1>سبد خرید</h1>
+        <div class="breadcrumb"><a href="#/">خانه</a><span>/</span><span>سبد خرید</span></div>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="cart-empty">
+          <div class="cart-empty-icon">🛒</div>
+          <h3>سبد خرید شما خالی است</h3>
+          <p>هنوز محصولی به سبد خرید اضافه نکرده‌اید.</p>
+          <a href="#/shop" class="btn btn-primary btn-lg">مشاهده فروشگاه</a>
+        </div>
+      </div>
+    </section>`;
+  }
+
+  const totals = cartTotals();
+
+  return `
+  <div class="page-head">
+    <div class="container">
+      <h1>سبد خرید</h1>
+      <p>${toFa(totals.count)} محصول در سبد خرید شما</p>
+      <div class="breadcrumb"><a href="#/">خانه</a><span>/</span><span>سبد خرید</span></div>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top:40px">
+    <div class="container">
+      <div class="cart-layout">
+        <div>
+          ${state.cart.map(item=>{
+            const p = PRODUCTS.find(x=>x.id === item.id);
+            if(!p) return '';
+            return `
+              <div class="cart-item">
+                <img src="${p.img}" alt="${p.name}">
+                <div class="cart-item-info">
+                  <h4>${p.name}</h4>
+                  <div class="brand">${p.brand}</div>
+                  <div class="price">${formatPrice(p.price * item.qty)}</div>
+                </div>
+                <div class="cart-item-actions">
+                  <div class="qty-control">
+                    <button type="button" onclick="updateCartQty(${p.id}, -1)">−</button>
+                    <input type="text" value="${toFa(item.qty)}" readonly>
+                    <button type="button" onclick="updateCartQty(${p.id}, 1)">+</button>
+                  </div>
+                  <button class="remove-btn" onclick="removeFromCart(${p.id})" title="حذف">🗑</button>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+
+        <div class="cart-summary">
+          <h3>خلاصه سفارش</h3>
+          <div class="summary-row"><span>جمع کل</span><span>${formatPrice(totals.subtotal)}</span></div>
+          <div class="summary-row"><span>هزینه ارسال</span><span>${totals.shipping === 0 ? '<span style="color:var(--success);font-weight:700">رایگان</span>' : formatPrice(totals.shipping)}</span></div>
+          ${totals.shipping === 0 ? '<div style="font-size:12px;color:var(--success);text-align:center;margin-top:8px">🎉 ارسال شما رایگان شد!</div>' : '<div style="font-size:12px;color:var(--muted);text-align:center;margin-top:8px">برای ارسال رایگان، '+formatPrice(5000000 - totals.subtotal)+' دیگر خرید کنید</div>'}
+          <div class="summary-row total"><span>مبلغ قابل پرداخت</span><span>${formatPrice(totals.total)}</span></div>
+          <button class="btn btn-primary btn-block btn-lg" onclick="checkout()" style="margin-top:20px">ادامه و پرداخت</button>
+          <a href="#/shop" class="btn btn-outline btn-block" style="margin-top:10px">ادامه خرید</a>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function checkout(){
+  toast('سفارش ثبت شد', 'کارشناسان ما به‌زودی با شما تماس می‌گیرند');
+  state.cart = [];
+  saveCart();
+  setTimeout(()=> location.hash = '#/', 1200);
+}
+
+/* ============================================================
+   CATEGORIES PAGE
+============================================================ */
+function renderCategories(){
+  return `
+  <div class="page-head">
+    <div class="container">
+      <h1>دسته‌بندی‌ها</h1>
+      <p>محصولات را بر اساس دسته‌بندی مرور کنید</p>
+      <div class="breadcrumb"><a href="#/">خانه</a><span>/</span><span>دسته‌بندی‌ها</span></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="cats-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+        ${CATEGORIES.map(c=>{
+          const count = PRODUCTS.filter(p=>p.category === c.id).length;
+          return `
+            <a href="#/shop?cat=${c.id}" class="cat-card reveal" style="padding:36px 20px">
+              <div class="cat-icon" style="width:70px;height:70px;font-size:34px">${c.icon}</div>
+              <h4 style="font-size:16px;margin-bottom:6px">${c.label}</h4>
+              <span style="font-size:12.5px;color:var(--muted)">${toFa(count)} محصول</span>
+            </a>
+          `;
+        }).join('')}
+      </div>
+    </div>
+  </section>`;
+}
+
+/* ============================================================
+   ABOUT
+============================================================ */
+function renderAbout(){
+  return `
+  <div class="page-head">
+    <div class="container">
+      <h1>درباره گجت‌لند</h1>
+      <p>داستان ما و تعهد به شما</p>
+      <div class="breadcrumb"><a href="#/">خانه</a><span>/</span><span>درباره ما</span></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-grid reveal">
+        <div>
+          <span class="section-eyebrow">درباره ما</span>
+          <h2 style="font-size:clamp(22px,3vw,32px);font-weight:800;margin:12px 0 20px;line-height:1.4">فروشگاه آنلاین گجت‌های مدرن</h2>
+          <p style="color:var(--muted);margin-bottom:16px">گجت‌لند از سال ۱۳۹۸ با هدف ارائه گجت‌های اصل و باکیفیت به ایرانیان تأسیس شد. ما با تمرکز بر رضایت مشتری، ضمانت اصالت کالا و ارسال سریع، به یکی از معتبرترین فروشگاه‌های آنلاین لوازم دیجیتال تبدیل شده‌ایم.</p>
+          <p style="color:var(--muted)">امروز با بیش از ۵۰٬۰۰۰ مشتری راضی و ارسال به سراسر کشور، به کار خود ادامه می‌دهیم.</p>
+          <div class="features-list">
+            <div class="feature-item"><i>✓</i> ضمانت اصالت کالا</div>
+            <div class="feature-item"><i>✓</i> ارسال سریع</div>
+            <div class="feature-item"><i>✓</i> پشتیبانی ۲۴/۷</div>
+            <div class="feature-item"><i>✓</i> ۷ روز ضمانت مرجوعی</div>
+          </div>
+        </div>
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80" alt="فروشگاه گجت‌لند">
+        </div>
+      </div>
+
+      <div style="margin-top:70px">
+        <div class="stats-grid">
+          <div class="stat-card reveal"><div class="stat-num" data-count="50000">۰</div><div class="stat-label">مشتری راضی</div></div>
+          <div class="stat-card reveal"><div class="stat-num" data-count="1200">۰</div><div class="stat-label">محصول متنوع</div></div>
+          <div class="stat-card reveal"><div class="stat-num" data-count="98">۰</div><div class="stat-label">درصد رضایت</div></div>
+          <div class="stat-card reveal"><div class="stat-num" data-count="6">۰</div><div class="stat-label">سال تجربه</div></div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+/* ============================================================
+   CONTACT
+============================================================ */
+function renderContact(){
+  return `
+  <div class="page-head">
+    <div class="container">
+      <h1>تماس با ما</h1>
+      <p>منتظر شنیدن صدای شما هستیم</p>
+      <div class="breadcrumb"><a href="#/">خانه</a><span>/</span><span>تماس با ما</span></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:30px" class="reveal">
+        <div class="form-card">
+          <h3 style="margin-bottom:6px">ارسال پیام</h3>
+          <p style="color:var(--muted);font-size:14px;margin-bottom:24px">پیام خود را بنویسید، در اسرع وقت پاسخ می‌دهیم.</p>
+          <form onsubmit="submitContact(event)">
+            <div class="form-grid">
+              <div class="form-group"><label>نام و نام خانوادگی <span class="req">*</span></label><input type="text" name="name" required minlength="3" placeholder="مثلاً علی محمدی"><span class="err-msg"></span></div>
+              <div class="form-group"><label>شماره تماس <span class="req">*</span></label><input type="tel" name="phone" required pattern="09[0-9]{9}" placeholder="۰۹۱۲۱۲۳۴۵۶۷"><span class="err-msg"></span></div>
+              <div class="form-group full"><label>موضوع <span class="req">*</span></label>
+                <select name="subject" required>
+                  <option value="">انتخاب کنید...</option>
+                  <option>پیگیری سفارش</option>
+                  <option>سؤال درباره محصول</option>
+                  <option>مرجوعی کالا</option>
+                  <option>همکاری</option>
+                  <option>سایر موارد</option>
+                </select>
+                <span class="err-msg"></span>
+              </div>
+              <div class="form-group full"><label>پیام <span class="req">*</span></label><textarea name="message" required minlength="10" placeholder="پیام خود را بنویسید..."></textarea><span class="err-msg"></span></div>
+              <div class="full"><button type="submit" class="btn btn-primary btn-lg btn-block">ارسال پیام</button></div>
+            </div>
+          </form>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div class="form-card" style="padding:22px">
+            <h4 style="margin-bottom:14px">اطلاعات تماس</h4>
+            <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:14px"><span style="color:var(--purple);font-size:18px">☎</span><div><div style="font-size:12px;color:var(--muted)">تلفن</div><strong>۰۲۱-۹۱۰۰۸۸۷۷</strong></div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:14px"><span style="color:var(--purple);font-size:18px">✉</span><div><div style="font-size:12px;color:var(--muted)">ایمیل</div><strong>info@gadgetland.ir</strong></div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--purple);font-size:18px">⌂</span><div><div style="font-size:12px;color:var(--muted)">آدرس</div><strong style="font-size:14px">تهران، خیابان ولیعصر، برج تجاری نور، طبقه ۵</strong></div></div>
+          </div>
+          <div class="form-card" style="padding:22px">
+            <h4 style="margin-bottom:14px">ساعت پاسخگویی</h4>
+            <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px"><span style="color:var(--muted)">شنبه تا پنجشنبه</span><strong>۹:۰۰ تا ۱۸:۰۰</strong></div>
+            <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--muted)">جمعه</span><strong style="color:var(--danger)">تعطیل</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function submitContact(e){
+  e.preventDefault();
+  if(!validateForm(e.target)) return;
+  toast('پیام ارسال شد','به‌زودی با شما تماس می‌گیریم','success');
+  e.target.reset();
+}
+
+/* ============================================================
+   VALIDATION
+============================================================ */
+function validateForm(form){
+  let ok = true;
+  form.querySelectorAll('[required],[pattern]').forEach(el=>{
+    el.classList.remove('err');
+    const msg = el.parentElement.querySelector('.err-msg');
+    if(msg) msg.textContent = '';
+    if(!el.checkValidity()){
+      ok = false;
+      el.classList.add('err');
+      if(msg){
+        if(el.validity.valueMissing) msg.textContent = 'این فیلد الزامی است.';
+        else if(el.validity.patternMismatch) msg.textContent = 'فرمت وارد شده صحیح نیست.';
+        else if(el.validity.tooShort) msg.textContent = 'مقدار وارد شده کوتاه است.';
+        else msg.textContent = 'لطفاً مقدار صحیح وارد کنید.';
+      }
+    }
+  });
+  if(!ok) toast('خطا در فرم','لطفاً خطاها را برطرف کنید','error');
+  return ok;
+}
+
+function subscribeNews(e){
+  e.preventDefault();
+  toast('عضویت ثبت شد','از تخفیف‌ها باخبر می‌شوید','success');
+  e.target.reset();
+}
+
+/* ============================================================
+   MOBILE MENU & SEARCH
+============================================================ */
+function openMobileMenu(){
+  $('#mobileMenu').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  $('#menuToggle').setAttribute('aria-expanded', 'true');
+}
+function closeMobileMenu(){
+  $('#mobileMenu').classList.remove('open');
+  document.body.style.overflow = '';
+  $('#menuToggle').setAttribute('aria-expanded', 'false');
+}
+function toggleMobileMenu(){
+  $('#mobileMenu').classList.contains('open') ? closeMobileMenu() : openMobileMenu();
+}
+function toggleSearch(){
+  const bar = $('#searchBar');
+  bar.classList.toggle('open');
+  if(bar.classList.contains('open')) setTimeout(()=> $('#globalSearch').focus(), 100);
+}
+
+/* ============================================================
+   REVEAL & COUNTERS
+============================================================ */
+let revealObserver;
+function initReveal(){
+  if(revealObserver) revealObserver.disconnect();
+  revealObserver = new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){ en.target.classList.add('in'); revealObserver.unobserve(en.target); }
+    });
+  }, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+  $$('.reveal').forEach(el=> revealObserver.observe(el));
+}
+
+const countersDone = new WeakSet();
+function initStatsCounters(){
+  const els = $$('[data-count]');
+  if(!els.length) return;
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting && !countersDone.has(en.target)){
+        countersDone.add(en.target);
+        const target = Number(en.target.dataset.count);
+        const dur = 1600;
+        const start = performance.now();
+        function tick(now){
+          const t = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - t, 3);
+          en.target.textContent = toFa(Math.floor(target * eased));
+          if(t < 1) requestAnimationFrame(tick);
+          else en.target.textContent = toFa(target) + '+';
+        }
+        requestAnimationFrame(tick);
+        obs.unobserve(en.target);
+      }
+    });
+  }, {threshold:.4});
+  els.forEach(el=> obs.observe(el));
+}
+
+/* ============================================================
+   EVENTS
+============================================================ */
+window.addEventListener('scroll', ()=>{
+  const header = $('#header');
+  if(header) header.classList.toggle('scrolled', window.scrollY > 30);
+});
+
+window.addEventListener('hashchange', handleRoute);
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  const menuBtn = $('#menuToggle');
+  const searchBtn = $('#searchToggle');
+  const searchInp = $('#globalSearch');
+  const filtersOverlay = $('#filtersOverlay');
+
+  if(menuBtn) menuBtn.addEventListener('click', toggleMobileMenu);
+  if(searchBtn) searchBtn.addEventListener('click', toggleSearch);
+  if(filtersOverlay) filtersOverlay.addEventListener('click', closeFilters);
+
+  if(searchInp){
+    searchInp.addEventListener('input', debounce(e=>{
+      const q = e.target.value.trim();
+      if(q.length >= 2 || q.length === 0){
+        state.filters.search = q;
+        if(state.route !== 'shop') location.hash = '#/shop';
+        else renderShopGrid();
+      }
+    }, 400));
+    searchInp.addEventListener('keydown', e=>{
+      if(e.key === 'Enter'){
+        e.preventDefault();
+        location.hash = '#/shop';
+        $('#searchBar').classList.remove('open');
+      }
+    });
+  }
+
+  if(!location.hash) location.hash = '#/';
+  handleRoute();
+});
+
+function debounce(fn, wait){
+  let t;
+  return function(...args){
+    clearTimeout(t);
+    t = setTimeout(()=> fn.apply(this, args), wait);
+  };
+}
+</script>
+</body>
+</html>
