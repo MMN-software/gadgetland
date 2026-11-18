@@ -1,186 +1,41 @@
+# GadgetLand — Electronics Online Store
 
+A complete online store front end for gadgets and accessories, written in **vanilla JavaScript (ES6+)**. The interface is fully Persian and right-to-left.
 
-# 🛒 گجت‌لند | GadgetLand
-
-### فروشگاه آنلاین لوازم دیجیتال و گجت‌های مدرن
-
-[![Live Demo](https://img.shields.io/badge/🌐_مشاهده_فروشگاه-6d28d9?style=for-the-badge)](https://MMN-software.github.io/gadgetland/)
-[![GitHub](https://img.shields.io/badge/سورس_کد-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/MMN-software/gadgetland)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)]()
-
-</div>
+[![Live demo](https://img.shields.io/badge/Live_demo-6D28D9?style=for-the-badge&logo=githubpages&logoColor=white)](https://mmn-software.github.io/gadgetland/)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript_ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![RTL](https://img.shields.io/badge/RTL-Persian_UI-334155?style=for-the-badge)
 
 ---
 
-## 📖 درباره پروژه
+## Features
 
-**گجت‌لند** یک فروشگاه آنلاین کامل برای لوازم دیجیتال و گجت‌های مدرن است که با هدف ارائه تجربه‌ای روان، مدرن و کاربرپسند طراحی و پیاده‌سازی شده است.
+**Shopping**
+- Cart persisted in `localStorage`: add, remove, change quantity, automatic totals
+- Free-shipping threshold and a checkout page with order submission
+- Wishlist saved across sessions
 
-این پروژه یک نمونه‌کار حرفه‌ای برای نمایش مهارت‌های **فرانت‌اند** و **تجارت الکترونیک** است و تمام امکانات یک فروشگاه واقعی را بدون نیاز به بک‌اند شبیه‌سازی می‌کند.
+**Discovery**
+- Live search with debouncing
+- Filters by category, brand and price range
+- Sorting by newest, price and rating
+- Product page with image gallery, specifications, ratings and similar products
 
----
+**Design**
+- Responsive from mobile to desktop
+- Full RTL layout with the Vazirmatn typeface
+- Scroll and hover animations
 
-## ✨ ویژگی‌های کلیدی
+## Run locally
 
-### 🛒 سیستم خرید کامل
-- ✅ **سبد خرید واقعی** با LocalStorage
-- ✅ افزودن، حذف و تغییر تعداد محصولات
-- ✅ محاسبه خودکار جمع کل
-- ✅ **ارسال رایگان** برای خرید بالای ۵ میلیون تومان
-- ✅ صفحه Checkout با ثبت سفارش
-
-### 🔍 جستجو و فیلتر
-- ✅ **جستجوی زنده** با Debounce
-- ✅ فیلتر بر اساس **دسته‌بندی** و **برند**
-- ✅ فیلتر **محدوده قیمت**
-- ✅ مرتب‌سازی (جدیدترین، ارزان، گران، امتیاز)
-
-### ❤️ امکانات کاربری
-- ✅ **علاقه‌مندی‌ها** با LocalStorage
-- ✅ گالری تصاویر محصول
-- ✅ سیستم امتیازدهی و نظرات
-- ✅ نمایش تخفیف‌ها با درصد
-
-### 🎨 طراحی
-- ✅ طراحی مدرن با رنگ بنفش + فیروزه‌ای
-- ✅ کاملاً **ریسپانسیو** (موبایل، تبلت، دسکتاپ)
-- ✅ کاملاً **راست‌چین (RTL)** و فارسی
-- ✅ فونت وزیرمتن
-- ✅ انیمیشن‌های اسکرول و Hover
-
----
-
-## 📄 صفحات سایت
-
-| صفحه | توضیح |
-|------|-------|
-| 🏠 صفحه اصلی | هیرو، دسته‌بندی‌ها، محصولات ویژه، نظرات |
-| 🛍️ فروشگاه | لیست کامل محصولات با فیلتر و مرتب‌سازی |
-| 📱 جزئیات محصول | گالری، مشخصات، افزودن به سبد |
-| 🛒 سبد خرید | مدیریت محصولات و خلاصه سفارش |
-| 📂 دسته‌بندی‌ها | ۶ دسته محصولات |
-| ℹ️ درباره ما | معرفی فروشگاه و آمار |
-| 📞 تماس با ما | فرم تماس و اطلاعات |
-
----
-
-## 🚀 تکنولوژی‌های استفاده‌شده
-
-<div align="center">
-
-| تکنولوژی | کاربرد |
-|:--------:|:-------|
-| **HTML5** | ساختار صفحات |
-| **CSS3** | طراحی، انیمیشن، ریسپانسیو |
-| **JavaScript (ES6+)** | تعاملات، سبد خرید، فیلترها |
-| **LocalStorage** | ذخیره سبد خرید و علاقه‌مندی‌ها |
-| **Vazirmatn Font** | فونت فارسی |
-| **GitHub Pages** | میزبانی سایت |
-
-</div>
-
----
-
-## 📁 ساختار پروژه
-
-```
-
-gadgetland/
-│
-├── index.html          # فایل اصلی (شامل HTML، CSS، JS)
-├── README.md           # همین فایل
-└── screenshots/        # (اختیاری) اسکرین‌شات‌ها
-
-```
-
-> 📌 این پروژه به‌صورت **تک‌فایلی (Single File)** طراحی شده تا راه‌اندازی و انتقال آن بسیار ساده باشد.
-
----
-
-## ⚙️ نصب و راه‌اندازی
-
-### روش ۱ — استفاده مستقیم
-
-1. فایل `index.html` را دانلود کنید
-2. آن را در مرورگر خود باز کنید
-3. تمام! فروشگاه آماده استفاده است ✅
-
-### روش ۲ — اجرا با سرور محلی
+Single-page app with no dependencies. Open `index.html`, or:
 
 ```bash
-git clone https://github.com/MMN-software/gadgetland.git
-cd gadgetland
-python -m http.server 8080
-```
-
-سپس در مرورگر باز کنید:
-
-```
-http://localhost:8080
+npx serve .
 ```
 
 ---
 
-🌐 مشاهده آنلاین
-
-فروشگاه به‌صورت زنده روی GitHub Pages میزبانی می‌شود:
-
-🔗 https://MMN-software.github.io/gadgetland/
-
----
-
-📊 اطلاعات پروژه
-
-مورد مقدار
-نوع پروژه فروشگاه اینترنتی
-دسته‌بندی لوازم دیجیتال
-زبان فارسی (RTL)
-تعداد صفحات ۷ صفحه
-تعداد محصولات نمونه ۱۲ محصول
-وضعیت ✅ آماده استفاده
-
----
-
-🎯 قابلیت‌های توسعه آینده
-
-☐ اتصال به درگاه پرداخت (زرین‌پال، آیدی‌پی)
-☐ پنل مدیریت محصولات
-☐ سیستم ورود و ثبت‌نام کاربران
-☐ مقایسه محصولات
-☐ نظرات و امتیازدهی کاربران
-☐ حالت تاریک (Dark Mode)
-
----
-
-👨‍💻 توسعه‌دهنده
-
-<div align="center">
-
-محمد مهدی نعمتی
-
-https://img.shields.io/badge/GitHub-MMN--software-181717?style=flat-square&logo=github
-https://img.shields.io/badge/Email-تماس-D14836?style=flat-square&logo=gmail&logoColor=white
-https://img.shields.io/badge/نمونه‌کار-آنلاین-6d28d9?style=flat-square
-
-</div>
-
----
-
-📄 لایسنس
-
-این پروژه برای اهداف آموزشی و نمایشی ساخته شده است. استفاده تجاری با ذکر منبع مجاز می‌باشد.
-
----
-
-<div align="center">
-
-⭐ اگر این پروژه را دوست داشتید، یک ستاره بدهید!
-
-ساخته شده با ❤️ در ایران
-
-</div>
-```
-
----
+Built by **[Mohammad Mehdi Nemati](https://github.com/MMN-software)** · Available for freelance work — [get in touch](mailto:mohammadmehdi.neemati@gmail.com)
